@@ -7,18 +7,17 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
 
-# Load the dataset
+# Loading dataset
 data = pd.read_csv("creditcard.csv")
 
-# Explore the dataset
-print(data.head())
-print(data.info())
-print(data.describe())
+#print(data.head())
+#print(data.info())
+#print(data.describe())
 
 # Check for missing values
 print(data.isnull().sum())
 
-# Visualize class distribution
+# Visualizing class distribution
 sns.countplot(x='Class', data=data)
 plt.title('Class Distribution')
 plt.show()
